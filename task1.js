@@ -8,15 +8,15 @@
 /* Note:
  Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array! */
 
-function betterThanAverage(classPoints, yourPoint) {
-	classPoints = [...classPoints, yourPoint];
+function betterThanAverage(classPoints, yourPoints) {
+	classPoints = [...classPoints, yourPoints];
 	var total = 0;
 	var n = classPoints.length;
 	classPoints.forEach(val => {
 		total += val;
 	});
 	var average = total / n;
-	return yourPoint > average ? true : false;
+	return yourPoints > average ? true : false;
 }
 
 console.log(betterThanAverage([2, 3], 5));
